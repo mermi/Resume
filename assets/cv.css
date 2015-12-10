@@ -286,7 +286,7 @@
 	}
 
 	.experiences li p, .formations li p {
-		margin-left: 30px;
+		margin-left: 0px;
 	}
 
 	/**********************************************
@@ -339,8 +339,8 @@
 	***********/
 	.lieu, .dates, .phone, .mail, .site, .form, .twitter, .facebook, .dribbble, .skype {
 		background: url('../img/pictos-gris.png') no-repeat;
-		padding-left: 25px;
-		margin: 0 10px 1px 10px;
+		padding-left: 0px;
+		margin: 0 10px 1px 2px;
 	}
 
 	.lieu {

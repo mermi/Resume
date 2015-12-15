@@ -18,10 +18,12 @@
 <![endif]-->
 <link rel="stylesheet" media="screen and (max-width:480px)" href="assets/mobile.css">
 <link rel="stylesheet" media="screen and (min-width:481px)" href="assets/cv.css">
+<!--
 <link rel="stylesheet" media="print" href="assets/print.css">
+-->
 </head>
 
-<body>
+<body id="printableArea">
 
 	<!-- Header -->
 	<header role="banner">
@@ -113,7 +115,7 @@
 							and SharePoint, with following features:
 						<ul>
 							<li style="margin-bottom:10px">Scheduling events and tournament</li>
-							<li style="margin-bottom:10px">Providing a vote for the Administrativ Cuncil of the association</li>
+							<li style="margin-bottom:10px">Providing a vote for the Administrative Cuncil of the association</li>
 							<li style="margin-bottom:10px">Managing inventory </li>
 							<li style="margin-bottom:10px">Posting gaming and tournament news online, </li>
 							<li style="margin-bottom:10px">Providing a discussion space between gamers and the association.</li>
@@ -135,9 +137,11 @@
 						<h4><strong>Prototype for radial graphs visualization:IG</strong> Stradefi SA</h4>
 						<span class="lieu">Switzerland</span>
 						<span class="dates">1 Feb - 31 May 2014</span>
-						<p>As the Graduation Project (Licence Degree), this project involved creating
-							a mobile application capable of managing and displaying visual representation
-							of patient data on a portable device.</p>
+						<p>As the Graduation Project (Licence Degree), this project involved design and development of a
+							sophisticated solution to manage complex relations between data objects (e.g. patient data records) and display
+							them on the screen. It was made as a Web Application using JavaScript Framework, capable of displaying graphical
+							representations of multiple types (bidirectional, unidirectional and complex) of relations between data objects.
+							JavaScript InfoVis Toolkit(JIT) was used to render the Radial graphical representation, while using JSON for data format..</p>
 					</li>
 					<li>
 						<h4><strong>Android Application Community Navigation</strong> TuniStreet</h4>
@@ -170,7 +174,7 @@
 							<ul>Have made following contributions under guidance of :jlorenzo, :mwargers, :njpark:
 							<li style="margin-bottom:10px">Wrote python Gaia ui tests for Bugzilla Lite which verifies major key functionalities of the app</li>
 							<li style="margin-bottom:10px">Took ownership of the Gaia automation bugs and provided patches to fix the test failures</li>
-							<li style="margin-bottom:10px">Provided feedbacks as a contributor for creating a workflow and wiki for Gaia UI automation training</li>
+							<li style="margin-bottom:10px">Provided feedback as a contributor for creating a workflow and wiki for Gaia UI automation training</li>
 						</ul>
 					</p>
 					</li>
@@ -193,40 +197,46 @@
 			<div class="grid_8 loisirs">
 				<h3>Non-Technical skills:</h3>
 				<ul>
-					<li>Arabic: Native language</li>
-					<li>French: Speaking, Writing</li>
-					<li>english: Speaking, Writing</li>
+					<li>Fluent in Arabic and French, Proficient in English (Most of my Mozilla efforts were done in verbal/written English)</li>
 				</u>
 			</div>
 			<div class="grid_8 loisirs">
 				<h3>Mozilla Volunteer Experience:</h3>
-				<p><stong>Mozilla Representative </strong>for 2 years: as a Representative I am involved to organize
-					or participate in Mozilla event,Recruit new contributor in my local community, lead local training project, etc.
-					We Represent Mozilla officially and help push the project forward in your country
-
-</p>
+				<p><stong>Mozilla Representative </strong>for 2 years: As a Representative I am involved in organizing and participating
+					in Mozilla events, recruiting new contributors in my local community, sleading local training projects, etc.
+					We officially represent Mozilla in Tunisia and help push the project forward in our country.</p>
 			</div>
 
 			<!-- Contact -->
 			<div class="grid_8 contact">
 				<h3>Contact</h3>
-				<p>If my profile interest you, please don't hesitate to contact me:</p>
+				<p>If my profile interests you, please do not hesitate to contact me:</p>
 				<ul>
 					<li class="lieu">Manouba, Tunisia</li>
 					<li class="phone">00 216 28 03 21 92</li>
 					<li class="mail"><a href="mailto:mon.adresse@email.fr">manel.rhaiem92@gmail.com</a></li>
-					<li class="site"><a href="http://www.mon-site.fr/">mermi.github.io</a></li>
+					<li class="site"><a href="mermi.github.io">My Blog</a></li>
 					<li class="form"><a class="toContactform">via contact form</a></li>
 					<li>
-						<form method="get" action="file.pdf">
-							<button type="submit">Download!</button>
-						</form>
+							<input type="button" onclick="printDiv('printableArea')" value="Download" />
 					</li>
 				</ul>
 			</div>
 	</section>
 
 <!-- Scripts JavaScript -->
+<script>
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+</script>
 <script src="assets/jquery-1.js"></script>
 <script src="assets/validate.js"></script>
 <!--[if lt IE 9]>

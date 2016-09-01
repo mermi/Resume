@@ -384,3 +384,7 @@
 	.skype {
 		background-position: 0 -180px;
 	}
+	#photo{
+		background-image: url("avatar.JPG");
+		background-size: cover;
+	}
